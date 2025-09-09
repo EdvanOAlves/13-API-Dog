@@ -6,9 +6,9 @@ const searchButton = document.getElementById('search-button');
 //Recebe input do usuário
 function getInput(){ 
     const searchBar = document.getElementById('search-bar');
-    const searchTerm = searchBar.value;
+    const input = searchBar.value;
+    const searchTerm = input.replace(' ', '/');
     return searchTerm;
-    // return searchTerm.replace(' ', '-');
 }
 
 //Busca na lista de raças se o input é valido e converte para a estrutura de array
